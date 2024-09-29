@@ -10,38 +10,63 @@ class MyColumnRow extends StatelessWidget {
           title: const Text('Column Row Demo'),
         ),
         body: Container(
-          height: 300,
+          height: 500,
           width: double.infinity,
           margin: const EdgeInsets.all(20.0),
           child: Column(
               // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               // mainAxisAlignment: MainAxisAlignment.spaceAround,
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              crossAxisAlignment: CrossAxisAlignment.center,
+              crossAxisAlignment: CrossAxisAlignment.start,
               children: <Widget>[
+                const Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                  children: <Widget>[
+                    Text(
+                      "A",
+                      style: TextStyle(fontSize: 40),
+                    ),
+                    Text(
+                      "A",
+                      style: TextStyle(fontSize: 40),
+                    ),
+                    Text(
+                      "A",
+                      style: TextStyle(fontSize: 40),
+                    ),
+                    Text(
+                      "A",
+                      style: TextStyle(fontSize: 40),
+                    ),
+                    Text(
+                      "A",
+                      style: TextStyle(fontSize: 40),
+                    ),
+                  ],
+                ),
                 const Text(
                   "A",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 40),
                 ),
                 const Text(
                   "B",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 40),
                 ),
                 const Text(
                   "C",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 40),
                 ),
                 const Text(
                   "D",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 40),
                 ),
                 const Text(
                   "E",
-                  style: TextStyle(fontSize: 20),
+                  style: TextStyle(fontSize: 40),
                 ),
                 SizedBox(
                   height: 25,
-                  width: 100,
+                  width: double.infinity,
                   child: ElevatedButton(
                       onPressed: () {}, child: const Text("Click")),
                 )
