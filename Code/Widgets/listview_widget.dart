@@ -16,6 +16,18 @@ class MylistView extends StatelessWidget {
           return Padding(
             padding: const EdgeInsets.only(top: 20, left: 10, right: 10),
             child: ListTile(
+              leading: Container(
+                // padding: EdgeInsets.all(5),
+                height: 45,
+                width: 45,
+                decoration: const BoxDecoration(
+                    shape: BoxShape.circle, color: Colors.red),
+                child: const Center(
+                  child: CircleAvatar(
+                    backgroundImage: AssetImage("assets/images/zenitsu.jpg"),
+                  ),
+                ),
+              ),
               trailing: ElevatedButton(
                   style: ElevatedButton.styleFrom(
                     backgroundColor: Colors.orange,
@@ -29,10 +41,20 @@ class MylistView extends StatelessWidget {
               tileColor: Colors.white,
               title: Text(
                 " 0311912921$index",
-                style: TextStyle(
+                style: const TextStyle(
                     fontWeight: FontWeight.bold,
                     fontSize: 20,
                     color: Colors.black),
+              ),
+              subtitle: const Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  Icon(Icons.call_made),
+                  SizedBox(
+                    width: 40,
+                  ),
+                  Text("20/2/2024"),
+                ],
               ),
             ),
           );
